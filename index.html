@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check width</title>
+</head>
+<body style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;
+flex-direction: column;">
+    <div class="width">This is the width of your device</div>
+    <div class="widthresult"></div>
+    <div class="height">This is the heigh of your device</div>
+    <div class="heightresult"></div>
+    <script>
+        window.addEventListener("DOMContentLoaded",()=>{
+            let width = document.querySelector('.widthresult')
+            let height = document.querySelector('.heightresult')
+            let a = `${document.body.offsetWidth} px`
+            width.innerHTML = a  
+            height.innerHTML = `${document.body.offsetHeight} px`
+        })
+        window.addEventListener("resize",()=>{
+            let width = document.querySelector('.widthresult')
+            let height = document.querySelector('.heightresult')
+            let a = `${document.body.offsetWidth} px`
+            width.innerHTML = a  
+            height.innerHTML = `${document.body.offsetHeight} px`
+        })
+        </script>
+</body>
+</html>
